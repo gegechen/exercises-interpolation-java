@@ -1,0 +1,10 @@
+* Plot the original expected data
+    o Seeing it has a clear trend
+    o Seeing it has multiple x project to same y in coordination
+
+* Making fitting strategy decision
+    o Since it has clear trend, and it is not linear nor simple polynomial function, I decide to throw linear regression algorithm.
+    o Since we will lose about 40% data, we might still have a dense dataset. I try first to use K nearest neighbor algorithm.
+    o Further observing the plot, K should not be big, otherwise I will get a plain curve. I decide to implement easy algorithm,
+    just take nearest 2 available right neighbor. For the beginning and ending points, iterate till we have available neighbors,
+    and use that 2 available points to fill the null point.
